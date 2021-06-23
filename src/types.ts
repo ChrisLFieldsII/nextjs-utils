@@ -24,3 +24,5 @@ export type NextApiHandler<
   B = Record<string, any>,
   Q = Record<string, string>,
 > = (req: INextApiRequest<B, Q>, res: NextApiResponse) => Promise<void>;
+
+export { NextApiResponse };
