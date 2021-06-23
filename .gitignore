@@ -1,0 +1,4 @@
+dist/
+dist.browser/
+node_modules/
+*.log
