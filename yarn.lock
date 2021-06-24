@@ -40,9 +40,9 @@
     to-fast-properties "^2.0.0"
 
 "@chrisfieldsii/utils@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@chrisfieldsii/utils/-/utils-1.0.0.tgz#b52c47ac3f1f76c36b290fc93e78bcbea1e7803a"
-  integrity sha512-1GediUTp2lrhd+qndOdHIF18/R7aJ64vAZzL+KIr5yWk43iS1a76GejCLLV/83cqRhyQM9/Bbf4mOVLQq5LDyw==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@chrisfieldsii/utils/-/utils-1.1.0.tgz#07b7dc91ce8de96110b63e12d824e3fb1f977b79"
+  integrity sha512-Wq3/k4PDrhaU4ImbM99UhefmgqhUrjogFZUv6ZeVTewN+9Vgg3xuNq19beWgEDQpyIFGB4gqrNV2MKo/4WVdqA==
 
 "@hapi/accept@5.0.2":
   version "5.0.2"
