@@ -1,10 +1,13 @@
-import type { NextApiResponse } from 'next';
-
-import { HttpMethod, INextApiRequest, NextApiHandler } from './types';
+import {
+  HttpMethod,
+  NextApiHandler,
+  NextApiRequest,
+  NextApiResponse,
+} from './types';
 
 interface IApiHandler {
   on(method: HttpMethod, handler: NextApiHandler): IApiHandler;
-  execute(req: INextApiRequest, res: NextApiResponse): Promise<void>;
+  execute(req: NextApiRequest, res: NextApiResponse): Promise<void>;
 }
 
 /**
@@ -23,8 +26,8 @@ export class ApiHandler implements IApiHandler {
     return this;
   };
 
-  execute = async (req: INextApiRequest, res: NextApiResponse) => {
-    const handler = this.handlerMap.get(req.method);
+  execute = async (req: NextApiRequest, res: NextApiResponse) => {
+    const handler = this.handlerMap.get(req.method as HttpMethod);
 
     if (!handler) {
       throw new Error(`HTTP Method ${req.method} not supported`);

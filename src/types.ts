@@ -16,13 +16,9 @@ export interface INextApiRequest<
   method: HttpMethod;
 }
 
-/**
- * @typeParam B - Body
- * @typeParam Q - Query
- */
-export type NextApiHandler<
-  B = Record<string, any>,
-  Q = Record<string, string>,
-> = (req: INextApiRequest<B, Q>, res: NextApiResponse) => Promise<void>;
+export type NextApiHandler = (
+  req: NextApiRequest,
+  res: NextApiResponse,
+) => Promise<void>;
 
-export { NextApiResponse };
+export { NextApiResponse, NextApiRequest };
