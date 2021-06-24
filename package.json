@@ -1,7 +1,7 @@
 {
   "name": "@chrisfieldsii/nextjs-utils",
   "description": "Utilities specifically for NextJS",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "private": false,
