@@ -2,7 +2,12 @@ import { ApiError, getError, getListResponse } from '@chrisfieldsii/utils';
 import cuid from 'cuid';
 import { v4 as uuidv4 } from 'uuid';
 
-import { NextApiResponse, HttpMethod, NextApiRequest } from './types';
+import {
+  NextApiResponse,
+  HttpMethod,
+  NextApiRequest,
+  INextApiRequest,
+} from './types';
 
 function defaultTransformPostBody(body: any) {
   return body;
@@ -20,7 +25,7 @@ export async function prismaHandler({
   idType = 'cuid',
 }: {
   prismaClient: any;
-  req: NextApiRequest;
+  req: INextApiRequest;
   res: NextApiResponse;
   table: string;
   include?: any;
