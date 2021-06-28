@@ -1,5 +1,6 @@
 export * from './types';
 export * from './api-handler';
+export * from './middlware';
 
 // export some modules from utils pkg. be careful to not include browser dependent modules.
 export {
