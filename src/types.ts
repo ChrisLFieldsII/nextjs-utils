@@ -6,10 +6,8 @@ export type HttpMethod = 'GET' | 'POST' | 'DELETE' | 'PUT' | 'PATCH';
  * @typeParam B - Body
  * @typeParam Q - Query
  */
-export interface INextApiRequest<
-  B = Record<string, any>,
-  Q = Record<string, string>,
-> extends Omit<NextApiRequest, 'query' | 'method'> {
+export interface INextApiRequest<B = any, Q = any>
+  extends Omit<NextApiRequest, 'query' | 'method'> {
   // Omit to be redefined for preferred typing
   body: B;
   query: Q;
@@ -20,9 +18,9 @@ export interface INextApiRequest<
  * @typeParam B - Body
  * @typeParam Q - Query
  */
-export type NextApiHandler<
-  B = Record<string, any>,
-  Q = Record<string, string>,
-> = (req: INextApiRequest<B, Q>, res: NextApiResponse) => Promise<void>;
+export type NextApiHandler<B = any, Q = any> = (
+  req: INextApiRequest<B, Q>,
+  res: NextApiResponse,
+) => Promise<void>;
 
 export { NextApiResponse, NextApiRequest };
